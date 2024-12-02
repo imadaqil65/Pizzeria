@@ -1,0 +1,352 @@
+
+/* Main Page */
+
+body{
+    background-size: auto;
+    background-repeat:initial;
+    margin: 0px;
+    background-image: url("../static/pictures/background3.jpg");
+    font-family: 'Nerko One', cursive;
+    color: white;
+}
+
+.toptext{
+    font-family: 'Cookie', cursive;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size:75px ;
+    
+}
+
+.Font-Logo{
+    float: right;
+    size:auto;
+}
+
+.footer{
+    text-align: center;
+}
+
+.middletext{
+    font-family: 'Cookie', cursive;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size:35px ;
+    
+}
+
+.buttondiv{
+    align-items: center;
+    text-align: center;
+    color:#f50e0e00;
+    
+}
+
+
+
+
+/* .button1{
+    
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color:black;
+    border:2px solid #4CAF50
+}
+
+.button1:hover{
+    background-color: #4CAF50;
+    color:white
+} */
+
+/*Menu */
+
+button {
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.page-nav {
+    background-color: #343f4700;
+    border: 1px solid black;
+    position: relative;
+}
+
+.page-nav h1 {
+    margin: 20px;
+    color: white;
+}
+
+.button-checkout {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA; /* Blue */
+    transition-duration: 0.4s;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+.button-checkout:hover {
+    background-color: #008CBA; /* Blue */
+    color: white;
+}
+
+.page-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.product-container {
+    size-adjust: auto;
+    display:inline-block;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 15px;
+    padding: 2px 16px;
+    position: relative;
+    border-style: inset;
+    border-color: #000000;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    background-color: rgba(74, 73, 73, 0.596);
+    color:white
+}
+
+.product-container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+.product-container img {
+    width: 300px;
+}
+
+.product-container h1 {
+    bottom:0;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+.button-add {
+    display: inline-flex;
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50; /* Green */
+    transition-duration: 0.4s;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+}
+
+.button-add:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+/* .details{
+    display:flex;
+    flex-wrap: wrap;
+    height:200px;
+    font-family:'Cookie', cursive;
+    font-size: xx-large;
+    margin: 15px;
+    color:antiquewhite
+} */
+
+/* Detail checkout */
+
+.details {
+    float: center;
+    padding:14px;
+    width: auto;
+    height: auto;
+    background-color: #3e3e3e56;
+  }
+
+input[type=text], select, textarea {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+.order {
+    text-decoration: none;
+    font-size: large;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    background-color: #40477b;
+    color: white;
+    padding: 12px 20px;
+    border: solid, 10px;
+    border-color: #000000;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+.order:hover {
+    background-color: #9ba1c83a;
+  }  
+
+.cart{
+    position: relative;
+    font-size: medium;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: rgba(196, 228, 255, 0.498);
+    padding: 10px;
+    min-width: 30vw;
+    width: fit-content;
+    min-height: 20px;
+    height: auto;
+}
+
+.box{
+    font-size: xx-large;
+    color: aliceblue;
+    font-family: 'Cookie', cursive;
+    flex-wrap: wrap;
+    width: fit-content;
+}
+
+span.price {
+    align-items: flex-end;
+    padding-left: 20px;
+    float: right;
+    color: rgb(15, 15, 15);
+  }
+
+ /* thanks page */
+
+#thanks {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+    text-align: center;
+    float: center;
+    color: aliceblue;
+ }
+
+.buttondelete{
+    font-size: small;
+    color: white;
+    background-color: transparent;
+    border: none;
+    transition: 0.3s;
+    border: 1px solid #fff;
+}
+
+.buttondelete:hover{
+    background-color: red;
+}
+
+  /*Order Page */
+
+
+.order-container {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 15px;
+    padding: 2px 16px;
+    position: relative;
+    border-style: inset;
+    border-color: #000000;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    background-color: rgba(74, 73, 73, 0.596);
+    color:white;
+    width: fit-content;
+    min-width: 300px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+
+#total-text {
+    color:white;
+    padding-left: 10px;
+    font-size: x-large;
+    position:absolute;
+    left: 0px;
+    bottom: 5px;
+}
+
+/* Kitchen Page */
+.kitchen-container {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 15px;
+    padding: 2px 16px;
+    position: relative;
+    min-width: 100px;
+    min-height: 100px;
+    border-style: inset;
+    border-color: #000000;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    background-color: rgba(74, 73, 73, 0.596);
+    color:white
+}
+
+.kitchen-start {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50; /* Green */
+    transition-duration: 0.4s;
+    position: relative;
+    right: 15px;
+    bottom: 10px;
+}
+.kitchen-start:hover{
+    background-color: #4CAF50;
+}
+.kitchen-finish {
+    background-color: white;
+    color: black;
+    border: 2px solid red; /* Green */
+    transition-duration: 0.4s;
+    position: relative;
+    right: 15px;
+    bottom: 10px;
+}
+.kitchen-finish:hover{
+    background-color: red;
+}
+
+/* Cashier site */
+
+.side-order{
+    padding-left:10px; 
+    padding-right: 10px;
+    height: 100%; 
+    width: auto; 
+    position: fixed; 
+    /* z-index: 1;  */
+    top: 0; 
+    right: 0;
+    background-color: rgba(116, 75, 155, 0.269); 
+    overflow-x: hidden; 
+}
+
+.menu-orders{
+    display:inline-block ;
+    width:75%;
+}
+
+.button-adding{
+    font-size: large;
+    min-width:200px;
+    max-width:200px;
+    align-self: center;
+    padding: 40px 10px;
+}

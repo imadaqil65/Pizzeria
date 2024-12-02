@@ -1,0 +1,76 @@
+<html>
+
+    <head>
+        <title>Mario & Luigi Pizzeria</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+        <script src="../static/scripts.js"></script>
+    </head>
+
+    <body background="../static/pictures/background.jpg" onload="checkout_page()">
+      <noscript>
+        <h1 class="toptext">This website requires JavaScript to function!</h1>
+      </noscript>
+      <h1 class="toptext" >Mario & Luigi Pizzeria</h1>
+      <div class="details">
+        <div class="cart">
+            <h4>Cart <span class="price" id="item-count" style="color:black"></span></h4>
+              <div id="products">
+              </div>
+              <hr>
+              <p>Total <span class="price" id="checkout-total-price" style="color:black"></span></p>
+              <p>Estimated preparing time <span class="price" id="checkout-est-time" style="color:black"></span></p>
+              <p>Estimated waiting time <span class="price" id="checkout-est-wait" style="color:black"></span></p>
+        </div>
+      </div>
+    <div class="details">
+        <div class="box">
+            <form name="customerDetails">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name..." required>
+          
+              <label for="phone">Phone number</label>
+              <input type="text" id="phone" name="phone" placeholder="Your phone number..." required>
+          
+              <label for="prepare">Prepare Time</label>
+              <select id="time" name="time" required>
+                <option value="0">As soon as possible</option>
+                <option value="900">+ 15 minutes</option>
+                <option value="1800">+ 30 minutes</option>
+                <option value="3600">+ 1 hour</option>
+                <option value="5400">+ 1:30 hours</option>
+                <option value="7200">+ 2 hours</option>
+                <option value="9000">+ 2:30 hours</option>
+                <option value="10800">+ 3 hours</option>
+                <option value="12600">+ 3:30 hours</option>
+                <option value="14400">+ 4 hours</option>
+              </select>
+          
+              <label for="message">Custom Message to the chef</label>
+              <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+              <p>We try to accommodate most of our customers' dietrary requests. If we are unable to fulfil your request we will contact you.</p>
+              <br><br>
+              <a class="order" onclick="validate()">Confirm order</a>
+            </form>
+        </div>
+    </div>
+    <script>
+      function validate() {
+        if( document.getElementById("name").value == "" ) {
+            alert( "Please provide your name!" );
+            document.getElementById("name").focus() ;
+            return false;
+        }
+        if( document.getElementById("phone").value == "" || isNaN( document.getElementById("phone").value ) || document.getElementById("phone").value.length != 10 ) {
+            alert( "Please provide a 10 digit phone number." );
+            document.getElementById("phone").focus() ;
+            return false;
+        }
+        addOrder();
+        return( true );
+      }
+    </script>
+    </body>
+</html>

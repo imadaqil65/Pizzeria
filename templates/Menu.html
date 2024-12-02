@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Order Now - Mario & Luigi Pizzeria</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+        <script src="../static/scripts.js"></script>
+    </head>
+
+    <body>
+        <noscript>
+            <h1 class="toptext">This website requires JavaScript to function!</h1>
+        </noscript>
+        <div class="page-nav">
+            <h1 class="toptext">Mario & Luigi Pizzeria</h1>
+            <table class="order-container">
+                <caption>
+                    <p>Your current order</p>
+                </caption>
+                <tr>
+                    <th>#</th>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>-</th>
+                </tr>
+            </table>
+            <p id="total-text"><b>Total <a id="total-price">€0</a></b></p>
+            <button id="checkout" class="button-checkout" onclick="checkout()">Checkout</button>
+        </div>
+        <div class="page-content">
+
+            {% for x in products %}
+                <div class="product-container">
+                    <h3>{{ x["name"] }}</h3>
+                    <img src="../static/pictures/{{ x["dish"]}}-{{ x["name"].replace(" ", "").lower() }}.png" />
+                    <h1>€{{ x["price"] }}</h1>
+                    <button class="button-add" onclick="add({{ x }})">Add to cart</button>
+                </div>
+            {% endfor %}
+        </div>
+    
+    
+    
+    </body>
+
+</html>

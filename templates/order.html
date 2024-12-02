@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+        <h1 class="toptext">Cashier page</h1>
+        <script src="../static/scripts.js"></script>
+    </head>
+    <body class="other">
+        <div class="side-order">
+            <table class="order-container">
+                <caption>
+                    <p>Your current order</p>
+                </caption>
+                <tr>
+                    <th>#</th>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Remove</th>
+                </tr>
+            </table>
+            <p id="total-text"><b>Total <a id="total-price">€0</a></b></p>
+            <button id="checkout" class="button-checkout" onclick="checkout()">Checkout</button>
+        </div>
+        <div class="menu-orders">
+            {% for x in products %}
+                <div class="product-container">
+                    <!-- <img src="../static/pictures/blank.png"> -->
+                    <button class="button-adding" onclick="add({{ x }})">{{ x["name"] }} <br> €{{ x["price"] }}</button>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>

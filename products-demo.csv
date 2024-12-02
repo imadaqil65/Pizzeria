@@ -1,0 +1,25 @@
+"dish","name","price","cooktime"
+"pizza","Fungi",10.99,8
+"pizza","Pepperoni",15.99,10
+"pizza","Salami",16.99,12
+"pizza","Hawaii",13.99,10
+"pizza","BBQ",19.99,17
+"pizza","Napoletana",24.49,15
+"pizza","Gorgonzolla",14.99,10
+"pizza","Al Taglio",20.49,8
+"pizza","Siciliana",22.29,9
+"pizza","Padellino",20.89,13
+"pizza","Chicken",14.99,12
+"pizza","Margherita",14.99,10
+"pizza","Mozzarella",12.99,8
+"side","Garlic bread",5.99,5
+"side","Risotto",12.99,10
+"side","Spaghetti Carbonara",12.99,10
+"side","Zucchini",8.99,8
+"side","Caprese",7.99,8
+"drink","Mineral water",1.99,0
+"drink","Fanta",1.99,0
+"drink","Coca-Cola",2.19,0
+"drink","Milkshake",3.99,5
+"drink","Lipton Tea",2.29,0
+"drink","Red Bull",2.99,0

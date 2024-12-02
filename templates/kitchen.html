@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Mario & Luigi Pizzeria</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+        <script src="../static/scripts.js"></script>
+        <meta http-equiv="refresh" content="5" > <!-- auto-refresh -->
+    </head>
+
+    <body>
+        <h1 style="text-align: center;">Current orders in queue</h1>
+        <div class="page-content">
+            {% for x in ordersList %}
+                {% if x[6] != "done" %}
+                    <div class="kitchen-container">
+                        {% if x[6] == "notDone" %}
+                            <h3 style="color: #ff0000">Order {{ x[5] }}</h3>
+                        {% else %}
+                            <h3 style="color: #ffff00">Order {{ x[5] }}</h3>
+                        {% endif %}
+                        <p>{{ x[1] }}, {{ x[2] }}</p>
+                        <p>Time: {{ datetime.fromtimestamp(x[7]).strftime("%H:%M:%S %d/%m/%Y") }}</p>
+                        {% if x[3] != "0" %}
+                            <p>Delay by: {{ time.strftime("%H:%M:%S", time.gmtime(int(x[3]))) }}</p>
+                        {% else %}
+                            <p>No delay (ASAP)</p>
+                        {% endif %}
+                        <p>Message: {{ x[4] }}</p>
+                        <hr>
+                        {% for y in x[0] %}
+                            <p><b>{{ y["dish"] }}:</b> {{ y["name"] }} - {{ y["cooktime"] }}s</p>
+                        {% endfor %}
+                        <button class="kitchen-start" onclick="startOrder({{ ordersList.index(x) }})">Start</button>
+                        <button class="kitchen-finish" onclick="finishOrder({{ ordersList.index(x) }})">Finish</button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <button class="button-add" onclick="finishOrder(\"current\")">Finish current order</button>
+    </body>
+
+</html>
